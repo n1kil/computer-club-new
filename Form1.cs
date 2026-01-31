@@ -20,16 +20,16 @@ namespace computer_club
         {
             InitializeComponent();
 
-            _club = new ComputerClub(11);
+            _club = new ComputerClub(9);
 
             InitComputerUI();
             UpdateUI();
         }
         private void InitComputerUI()
         {
-            _computerLabels = new List<Label> { labelPc1, labelPc2, labelPc3};
+            _computerLabels = new List<Label> { labelPc1, labelPc2, labelPc3, labelPc4, labelPc5 , labelPc6 , labelPc7, labelPc8, labelPc9 };
 
-            _computerButtons = new List<Button>{ buttonPc1, buttonPc2, buttonPc3, };
+            _computerButtons = new List<Button>{ buttonPc1, buttonPc2, buttonPc3, buttonPc4, buttonPc5, buttonPc6, buttonPc7, buttonPc8, buttonPc9 };
 
             for (int i = 0; i < _computerButtons.Count; i++)
             {
@@ -94,6 +94,16 @@ namespace computer_club
         private void UpdateBalance()
         {
             labelBalance.Text = $"Баланс: {_club.Money}";
+        }
+
+        private void labelBalance_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
